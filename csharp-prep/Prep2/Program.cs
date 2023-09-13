@@ -54,15 +54,5 @@ class Program
             Console.WriteLine("You got an F :(");
         }
 
-        
-
-        if ( x >= 77 && x < 80 )
-        {
-            sym = "+";
-        }
-        else if( x <= 73 && x > 70)
-        {
-            sym = "-";
-        }
     }
 }
