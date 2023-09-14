@@ -16,7 +16,7 @@ class Program
 
         if (x >= 90)
         {
-            Console.WriteLine($"You got an A{sym}!");
+            Console.WriteLine("You got an A!");
         }
         else if (x >= 80 && x < 90)
         {
@@ -30,7 +30,7 @@ class Program
                 sym = "-";
             }
 
-            Console.WriteLine($"You got an B{sym} :(");
+            Console.WriteLine($"You got an B{sym} :)");
         }
         else if (x >= 70 && x < 80)
         {
@@ -47,7 +47,7 @@ class Program
         }
         else if (x >= 60 && x < 70)
         {
-            Console.WriteLine($"You got an D :(");
+            Console.WriteLine("You got an D :(");
         }
         else if (x < 60)
         {
