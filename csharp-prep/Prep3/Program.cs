@@ -34,6 +34,7 @@ class Program
                     Console.WriteLine("Lower");
                 }
 
+                // Cheat code to get the answer right away
                 else if (gue == 6969)
                 {
                     Console.WriteLine($"The magic number is {magicNumber}");
