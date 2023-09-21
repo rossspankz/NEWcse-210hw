@@ -1,33 +1,49 @@
 using System;
+using System.Runtime.InteropServices.Marshalling;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("What is the magic Number?");
-        int magicNumber = int.Parse(Console.ReadLine());
-
-        int gue = 0;
-
-       while(magicNumber != gue)
+        string ans = "y";
+        while (ans == "y")
         {
-            Console.Write("What is your guess?");
-            gue = int.Parse(Console.ReadLine());
-
-            if ( magicNumber > gue)
-            {
-                Console.WriteLine("Higher");
-            }
             
-            else if (magicNumber < gue)
+            Random randomGenerator = new Random();
+            int magicNumber = randomGenerator.Next(1, 1000);
+
+            Console.WriteLine("Welcome to number guesser!");
+            Console.WriteLine("Guess the number between 1-1000 to win!");
+            int gue = 0;
+            int numGuess = 0;
+
+            while(magicNumber != gue)
             {
-                Console.WriteLine("Lower");
+                Console.Write("What is your guess?");
+                numGuess += 1;
+                gue = int.Parse(Console.ReadLine());
+
+                if ( magicNumber > gue)
+                {
+                    Console.WriteLine("Higher");
+                }
+                
+                else if (magicNumber < gue)
+                {
+                    Console.WriteLine("Lower");
+                }
+            
+                else
+                {
+                    Console.WriteLine("You guessed it!");
+                    Console.WriteLine($"It took you {numGuess} tries.");
+                    
+                }
             }
-         
-            else
-           {
-                Console.WriteLine("You guessed it!");
-            }
-        }
+            Console.Write("Do you want to play again y/n? ");
+            ans = Console.ReadLine();
+        } 
+        Console.WriteLine("Thanks for Playing! Play again soon!");
+        
     }
 }
