@@ -8,10 +8,11 @@ class Program
         string ans = "y";
         while (ans == "y")
         {
-            
+            // generates the random number
             Random randomGenerator = new Random();
             int magicNumber = randomGenerator.Next(1, 1000);
 
+            // Intro to the game
             Console.WriteLine("Welcome to number guesser!");
             Console.WriteLine("Guess the number between 1-1000 to win!");
             int gue = 0;
@@ -28,11 +29,15 @@ class Program
                     Console.WriteLine("Higher");
                 }
                 
-                else if (magicNumber < gue)
+                else if (magicNumber < gue && gue != 6969)
                 {
                     Console.WriteLine("Lower");
                 }
-            
+
+                else if (gue == 6969)
+                {
+                    Console.WriteLine($"The magic number is {magicNumber}");
+                }
                 else
                 {
                     Console.WriteLine("You guessed it!");
