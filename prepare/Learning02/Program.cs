@@ -15,7 +15,12 @@ class Program
         job2._startYear = 2022;
         job2._endYear = 2023;
 
-        job1.showJob();
-        job2.showJob();
+        Resume myResume = new Resume();
+        myResume._name = "Ross Showzinho";
+
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
+
+        myResume.Display();
     }
 }
