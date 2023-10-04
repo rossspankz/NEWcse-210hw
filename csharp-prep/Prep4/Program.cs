@@ -42,7 +42,7 @@ class Program
         int min = listNum[0];
         foreach (int minNum in listNum)
         {
-            if (min > 0 && minNum < min)
+            if (minNum > 0 && minNum < min)
             {
                min = minNum;
             }
