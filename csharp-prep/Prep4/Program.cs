@@ -38,7 +38,8 @@ class Program
         int max = listNum.Max();
         Console.WriteLine($"The maximum is {max}");
 
-        // The min
+        // The min 
+        // I can't get it to display the minimum positive number
         int min = listNum[0];
         foreach (int minNum in listNum)
         {
